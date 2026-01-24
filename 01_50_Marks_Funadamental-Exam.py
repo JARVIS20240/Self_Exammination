@@ -41,14 +41,18 @@ Check whether the reversed number is palindrome"""
 def Palindrome():
         try:
             number = int(input("Enter Number:"))
+            if number <0 :
+                print("Negative numbers are not considered Palindrome.")
+                return
+            
             rev_num = int(str(number)[::-1])
-
+            
             print(f"Entered number: {number}\nReverse Number: {rev_num}")
 
             if (number == rev_num):
-                print(f"{number} is Plalindrome.")
+                print(f"{number} is Palindrome.")
             else:
-                print(f"{number} not Plalindrome.")
+                print(f"{number} not Palindrome.")
         except ValueError:
              print("Entere valid input.")
 Palindrome()
