@@ -38,21 +38,45 @@ Take a number n
 Reverse the number
 Check whether the reversed number is palindrome"""
 
-def Palindrome():
-        try:
-            number = int(input("Enter Number:"))
-            if number <0 :
-                print("Negative numbers are not considered Palindrome.")
-                return
+# def Palindrome():
+#         try:
+#             number = int(input("Enter Number:"))
+#             if number <0 :
+#                 print("Negative numbers are not considered Palindrome.")
+#                 return
             
-            rev_num = int(str(number)[::-1])
+#             rev_num = int(str(number)[::-1])
             
-            print(f"Entered number: {number}\nReverse Number: {rev_num}")
+#             print(f"Entered number: {number}\nReverse Number: {rev_num}")
 
-            if (number == rev_num):
-                print(f"{number} is Palindrome.")
-            else:
-                print(f"{number} not Palindrome.")
-        except ValueError:
-             print("Entere valid input.")
-Palindrome()
+#             if (number == rev_num):
+#                 print(f"{number} is Palindrome.")
+#             else:
+#                 print(f"{number} not Palindrome.")
+#         except ValueError:
+#              print("Entere valid input.")
+# Palindrome()
+
+# Q3:
+"""Given a list:
+nums = [12, 7, 9, 20, 33, 4, 18]
+
+Write code to:
+Separate even and odd numbers into two lists
+Find the largest even number
+Find the smallest odd number
+Print all results clearly."""
+nums = [12, 7, 9, 20, 33, 4, 18]
+def seperate_odd_even_num(num):
+    even = []
+    odd = [] 
+    for i in num:
+        if i%2==0:
+            even.append(i)
+        elif i%2!=0:
+            odd.append(i)
+    print((even))
+    print(odd)
+    print(max(even))
+    print(min(odd))
+seperate_odd_even_num(nums)
