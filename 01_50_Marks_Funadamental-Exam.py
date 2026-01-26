@@ -66,17 +66,28 @@ Separate even and odd numbers into two lists
 Find the largest even number
 Find the smallest odd number
 Print all results clearly."""
+# nums = [12, 7, 9, 20, 33, 4, 18]
+# def seperate_odd_even_num(num):
+#     even = []
+#     odd = [] 
+#     for i in num:
+#         if i%2==0:
+#             even.append(i)
+#         elif i%2!=0:
+#             odd.append(i)
+#     print((even))
+#     print(odd)
+#     print(max(even))
+#     print(min(odd))
+# seperate_odd_even_num(nums)
+
+# 2nd Way:
 nums = [12, 7, 9, 20, 33, 4, 18]
-def seperate_odd_even_num(num):
-    even = []
-    odd = [] 
-    for i in num:
-        if i%2==0:
-            even.append(i)
-        elif i%2!=0:
-            odd.append(i)
-    print((even))
-    print(odd)
-    print(max(even))
-    print(min(odd))
-seperate_odd_even_num(nums)
+
+even_list = [n for n in nums if n%2==0]
+odd_list = [n for n in nums if n%2!=0]
+
+print(f"Even No. List:{even_list}")
+print(f"Odd No. List:{odd_list}")
+print(f"Largest Even: {max(even_list)}")
+print(f"Smallest Odd: {min(odd_list)}")
