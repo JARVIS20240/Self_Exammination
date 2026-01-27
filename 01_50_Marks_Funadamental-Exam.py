@@ -117,3 +117,7 @@ student = {
 avg = (sum(student.values()) / len(student))
 print(f"Average score: {avg}")
 
+for name,marks in student.items():
+    if marks > avg :
+        print(f"{name} : {marks}")
+
