@@ -91,3 +91,29 @@ print(f"Even No. List:{even_list}")
 print(f"Odd No. List:{odd_list}")
 print(f"Largest Even: {max(even_list)}")
 print(f"Smallest Odd: {min(odd_list)}")
+
+# Q4:
+"""Create a dictionary of students:
+
+{
+  "Aman": 78,
+  "Riya": 92,
+  "Kunal": 65,
+  "Neha": 88
+}
+
+Write code to:
+Print students scoring above average
+Calculate and print the class average
+Print the topper’s name and marks"""
+
+student = {
+            "Aman": 78,
+            "Riya": 92,
+            "Kunal": 65,
+            "Neha": 88  
+            }
+
+avg = (sum(student.values()) / len(student))
+print(f"Average score: {avg}")
+
