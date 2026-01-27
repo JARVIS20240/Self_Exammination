@@ -121,3 +121,7 @@ for name,marks in student.items():
     if marks > avg :
         print(f"{name} : {marks}")
 
+topper_name = max(student, key=student.get)
+topper_marks = student[topper_name]
+
+print(f"Topper Student= {topper_name} : {topper_marks}")
