@@ -125,3 +125,23 @@ topper_name = max(student, key=student.get)
 topper_marks = student[topper_name]
 
 print(f"Topper Student= {topper_name} : {topper_marks}")
+
+"""
+🔹 Section B — Functions & Problem Solving (10 Marks)
+"""
+# Q5:
+"""
+Write a function:
+def count_types(data):
+
+Input:
+
+[10, "hi", 3.5, True, None, "Python"]
+
+Output:
+Integers: 1
+Strings: 2
+Floats: 1
+Booleans: 1
+NoneType: 1
+Use correct type checking."""
