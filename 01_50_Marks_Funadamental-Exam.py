@@ -14,21 +14,21 @@ Prints:
 "Zero" if n == 0
 📌 Marks Deduction if logic is repetitive or poorly structured."""
 
-# def check_num():
-#     try:
-#         number = int(input("Enter Number: "))
-#         if (number > 0 ) and (number%2==0):
-#             print(f"{number} is Positive and Even Number.")
-#         elif (number > 0 ) and (number%2!=0):
-#             print(f"{number} is Positive and Odd Number.")
-#         elif (number < 0):
-#             print(f"{number} is Negative.")
-#         else:
-#             print(f"Zero")
+def check_num():
+    try:
+        number = int(input("Enter Number: "))
+        if (number > 0 ) and (number%2==0):
+            print(f"{number} is Positive and Even Number.")
+        elif (number > 0 ) and (number%2!=0):
+            print(f"{number} is Positive and Odd Number.")
+        elif (number < 0):
+            print(f"{number} is Negative.")
+        else:
+            print(f"Zero")
 
-#     except ValueError:
-#         print("Enter Valid Input.")
-# check_num()
+    except ValueError:
+        print("Enter Valid Input.")
+check_num()
 
 # Q2
 """Q2. Loops & Number Logic (5 Marks)
@@ -38,24 +38,24 @@ Take a number n
 Reverse the number
 Check whether the reversed number is palindrome"""
 
-# def Palindrome():
-#         try:
-#             number = int(input("Enter Number:"))
-#             if number <0 :
-#                 print("Negative numbers are not considered Palindrome.")
-#                 return
+def Palindrome():
+        try:
+            number = int(input("Enter Number:"))
+            if number <0 :
+                print("Negative numbers are not considered Palindrome.")
+                return
             
-#             rev_num = int(str(number)[::-1])
+            rev_num = int(str(number)[::-1])
             
-#             print(f"Entered number: {number}\nReverse Number: {rev_num}")
+            print(f"Entered number: {number}\nReverse Number: {rev_num}")
 
-#             if (number == rev_num):
-#                 print(f"{number} is Palindrome.")
-#             else:
-#                 print(f"{number} not Palindrome.")
-#         except ValueError:
-#              print("Entere valid input.")
-# Palindrome()
+            if (number == rev_num):
+                print(f"{number} is Palindrome.")
+            else:
+                print(f"{number} not Palindrome.")
+        except ValueError:
+             print("Entere valid input.")
+Palindrome()
 
 # Q3:
 """Given a list:
@@ -66,31 +66,31 @@ Separate even and odd numbers into two lists
 Find the largest even number
 Find the smallest odd number
 Print all results clearly."""
-# nums = [12, 7, 9, 20, 33, 4, 18]
-# def seperate_odd_even_num(num):
-#     even = []
-#     odd = [] 
-#     for i in num:
-#         if i%2==0:
-#             even.append(i)
-#         elif i%2!=0:
-#             odd.append(i)
-#     print((even))
-#     print(odd)
-#     print(max(even))
-#     print(min(odd))
-# seperate_odd_even_num(nums)
+nums = [12, 7, 9, 20, 33, 4, 18]
+def seperate_odd_even_num(num):
+    even = []
+    odd = [] 
+    for i in num:
+        if i%2==0:
+            even.append(i)
+        elif i%2!=0:
+            odd.append(i)
+    print((even))
+    print(odd)
+    print(max(even))
+    print(min(odd))
+seperate_odd_even_num(nums)
 
 # 2nd Way:
-# nums = [12, 7, 9, 20, 33, 4, 18]
+nums = [12, 7, 9, 20, 33, 4, 18]
 
-# even_list = [n for n in nums if n%2==0]
-# odd_list = [n for n in nums if n%2!=0]
+even_list = [n for n in nums if n%2==0]
+odd_list = [n for n in nums if n%2!=0]
 
-# print(f"Even No. List:{even_list}")
-# print(f"Odd No. List:{odd_list}")
-# print(f"Largest Even: {max(even_list)}")
-# print(f"Smallest Odd: {min(odd_list)}")
+print(f"Even No. List:{even_list}")
+print(f"Odd No. List:{odd_list}")
+print(f"Largest Even: {max(even_list)}")
+print(f"Smallest Odd: {min(odd_list)}")
 
 # Q4:
 """Create a dictionary of students:
@@ -107,24 +107,24 @@ Print students scoring above average
 Calculate and print the class average
 Print the topper’s name and marks"""
 
-# student = {
-#             "Aman": 78,
-#             "Riya": 92,
-#             "Kunal": 65,
-#             "Neha": 88  
-#             }
+student = {
+            "Aman": 78,
+            "Riya": 92,
+            "Kunal": 65,
+            "Neha": 88  
+            }
 
-# avg = (sum(student.values()) / len(student))
-# print(f"Average score: {avg}")
+avg = (sum(student.values()) / len(student))
+print(f"Average score: {avg}")
 
-# for name,marks in student.items():
-#     if marks > avg :
-#         print(f"{name} : {marks}")
+for name,marks in student.items():
+    if marks > avg :
+        print(f"{name} : {marks}")
 
-# topper_name = max(student, key=student.get)
-# topper_marks = student[topper_name]
+topper_name = max(student, key=student.get)
+topper_marks = student[topper_name]
 
-# print(f"Topper Student= {topper_name} : {topper_marks}")
+print(f"Topper Student= {topper_name} : {topper_marks}")
 
 """
 🔹 Section B — Functions & Problem Solving (10 Marks)
@@ -145,34 +145,34 @@ Floats: 1
 Booleans: 1
 NoneType: 1
 Use correct type checking."""
-# def count_types(data):
+def count_types(data):
 
-#     Integers= 0
-#     Strings=0
-#     Floats=0
-#     Booleans= 0
-#     NoneType= 0
-#     for i in data:
-#         if i is None:
-#             NoneType+=1
-#         elif isinstance(i, bool):
-#             Booleans+=1
-#         elif isinstance(i, int):
-#             Integers+=1
-#         elif isinstance(i, str):
-#             Strings+=1
-#         elif isinstance(i, float):
-#             Floats+=1   
-#     print("Done")
-#     print(f"""
-#         Integers: {Integers}
-#         Strings: {Strings}
-#         Floats: {Floats}
-#         Booleans: {Booleans}
-#         NoneType: {NoneType}""")
-#     print(data)
-# data = [10, "hi", 3.5, True, None, "Python"]
-# count_types(data)
+    Integers= 0
+    Strings=0
+    Floats=0
+    Booleans= 0
+    NoneType= 0
+    for i in data:
+        if i is None:
+            NoneType+=1
+        elif isinstance(i, bool):
+            Booleans+=1
+        elif isinstance(i, int):
+            Integers+=1
+        elif isinstance(i, str):
+            Strings+=1
+        elif isinstance(i, float):
+            Floats+=1   
+    print("Done")
+    print(f"""
+        Integers: {Integers}
+        Strings: {Strings}
+        Floats: {Floats}
+        Booleans: {Booleans}
+        NoneType: {NoneType}""")
+    print(data)
+data = [10, "hi", 3.5, True, None, "Python"]
+count_types(data)
 
 # Q6:
 """Q6. Error Handling (5 Marks)
@@ -196,18 +196,18 @@ Print meaningful error messages."""
 #     print("Not devide by 0")
 
 # Improve Code:
-# while True:
-#     try:
-#         a = float(input("Enter 1st No: "))
-#         b = float(input("Enter 2nd No: "))
-#         result = a/b
-#     except ValueError:
-#         print("Invalid input. Please enter numeric values only.")
-#     except ZeroDivisionError:
-#         print("Division by zero is not allowed.")
-#     else:
-#         print(result)
-#         break
+while True:
+    try:
+        a = float(input("Enter 1st No: "))
+        b = float(input("Enter 2nd No: "))
+        result = a/b
+    except ValueError:
+        print("Invalid input. Please enter numeric values only.")
+    except ZeroDivisionError:
+        print("Division by zero is not allowed.")
+    else:
+        print(result)
+        break
 
 """
 🔹 Section C — OOPs (20 Marks)
@@ -219,18 +219,18 @@ Create a class Employee with:
 Attributes: name, salary
 Method: display_info()
 Create two objects and display their details."""
-# class Employee:
-#     def __init__(self, name, salary):
-#         self.name= name
-#         self.slary = salary
+class Employee:
+    def __init__(self, name, salary):
+        self.name= name
+        self.slary = salary
     
-#     def display_info(self):
-#         print(f"Employee Name: {self.name}\nEmployee Salary: {self.slary}")
+    def display_info(self):
+        print(f"Employee Name: {self.name}\nEmployee Salary: {self.slary}")
 
-# karan = Employee("Karan", 2500000)
-# mann = Employee("Mann", 300000)
-# karan.display_info()
-# mann.display_info()
+karan = Employee("Karan", 2500000)
+mann = Employee("Mann", 300000)
+karan.display_info()
+mann.display_info()
 
 # Q8 :
 """Constructor & Inheritance (7 Marks)
@@ -241,23 +241,23 @@ Class Employee inheriting Person
 Additional attribute: emp_id
 Method: show_details()
 Demonstrate inheritance properly."""
-# class Person:
-#     def __init__(self, name, age):
-#         self.name = name
-#         self.age = age
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
-# class Employee(Person):
-#     def __init__(self, name, age, emp_id):
-#         super().__init__(name, age)
-#         self.emp_id = emp_id
+class Employee(Person):
+    def __init__(self, name, age, emp_id):
+        super().__init__(name, age)
+        self.emp_id = emp_id
 
-#     def show_details(self):
-#         print(f"Name: {self.name}\nAge: {self.age}\nEmployee ID: {self.emp_id}")
+    def show_details(self):
+        print(f"Name: {self.name}\nAge: {self.age}\nEmployee ID: {self.emp_id}")
 
-# karan = Person("Karan", 22)
+karan = Person("Karan", 22)
 
-# mann = Employee("Mann", 19, 123456789)
-# mann.show_details()
+mann = Employee("Mann", 19, 123456789)
+mann.show_details()
 
 # Q9:
 """Encapsulation (4 Marks)
@@ -301,3 +301,41 @@ karan.withdraw(2000)
 karan.get_balance()
 mann.deposit(500)
 mann.get_balance()
+
+# Q10. 
+"""Polymorphism (4 Marks)
+Create:
+
+Class Shape with method area()
+Subclasses Rectangle and Circle
+Override area() in both
+Demonstrate polymorphism using a loop."""
+class Shape:
+    def area(self):
+        pass
+
+class Rectangle(Shape):
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    def area(self):
+        return self.width * self.height
+    
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+    
+    def area(self):
+        pi = 22/7
+        return pi * self.radius * self.radius
+
+shapes = [
+    Rectangle(5, 3),
+    Circle(4),
+    Rectangle(2, 7),
+    Circle(1.5)
+]
+for i in shapes:
+    print(i.__class__.__name__, "Area: ",i.area())
+
