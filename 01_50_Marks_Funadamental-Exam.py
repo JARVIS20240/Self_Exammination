@@ -231,3 +231,30 @@ karan = Employee("Karan", 2500000)
 mann = Employee("Mann", 300000)
 karan.display_info()
 mann.display_info()
+
+# Q8 :
+"""Constructor & Inheritance (7 Marks)
+Create:
+
+Class Person with name, age
+Class Employee inheriting Person
+Additional attribute: emp_id
+Method: show_details()
+Demonstrate inheritance properly."""
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+class Employee(Person):
+    def __init__(self, name, age, emp_id):
+        super().__init__(name, age)
+        self.emp_id = emp_id
+
+    def show_details(self):
+        print(f"Name: {self.name}\nAge: {self.age}\nEmployee ID: {self.emp_id}")
+
+karan = Person("Karan", 22)
+
+mann = Employee("Mann", 19, 123456789)
+mann.show_details()
