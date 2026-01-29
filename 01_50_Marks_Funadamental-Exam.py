@@ -145,31 +145,66 @@ Floats: 1
 Booleans: 1
 NoneType: 1
 Use correct type checking."""
-def count_types(data):
+# def count_types(data):
 
-    Integers= 0
-    Strings=0
-    Floats=0
-    Booleans= 0
-    NoneType= 0
-    for i in data:
-        if i is None:
-            NoneType+=1
-        elif isinstance(i, bool):
-            Booleans+=1
-        elif isinstance(i, int):
-            Integers+=1
-        elif isinstance(i, str):
-            Strings+=1
-        elif isinstance(i, float):
-            Floats+=1   
-    print("Done")
-    print(f"""
-        Integers: {Integers}
-        Strings: {Strings}
-        Floats: {Floats}
-        Booleans: {Booleans}
-        NoneType: {NoneType}""")
-    print(data)
-data = [10, "hi", 3.5, True, None, "Python"]
-count_types(data)
+#     Integers= 0
+#     Strings=0
+#     Floats=0
+#     Booleans= 0
+#     NoneType= 0
+#     for i in data:
+#         if i is None:
+#             NoneType+=1
+#         elif isinstance(i, bool):
+#             Booleans+=1
+#         elif isinstance(i, int):
+#             Integers+=1
+#         elif isinstance(i, str):
+#             Strings+=1
+#         elif isinstance(i, float):
+#             Floats+=1   
+#     print("Done")
+#     print(f"""
+#         Integers: {Integers}
+#         Strings: {Strings}
+#         Floats: {Floats}
+#         Booleans: {Booleans}
+#         NoneType: {NoneType}""")
+#     print(data)
+# data = [10, "hi", 3.5, True, None, "Python"]
+# count_types(data)
+
+# Q6:
+"""Q6. Error Handling (5 Marks)
+
+Write a program that:
+Takes two numbers from user
+Divides them
+Handles:
+Division by zero
+Invalid input (non-numeric)
+Print meaningful error messages."""
+# My code:
+# try:
+#     a = int(input("Enter 1st Number: "))
+#     b = int(input("Enter 2nd Number: "))
+#     division = a / b
+#     print(division)
+# except ValueError:
+#     print("Enter valdi Numbers Not Characters.!!!")
+# except ZeroDivisionError :
+#     print("Not devide by 0")
+
+# Improve Code:
+while True:
+    try:
+        a = float(input("Enter 1st No: "))
+        b = float(input("Enter 2nd No: "))
+        result = a/b
+    except ValueError:
+        print("Invalid input. Please enter numeric values only.")
+    except ZeroDivisionError:
+        print("Division by zero is not allowed.")
+    else:
+        print(result)
+        break
