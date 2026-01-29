@@ -196,15 +196,36 @@ Print meaningful error messages."""
 #     print("Not devide by 0")
 
 # Improve Code:
-while True:
-    try:
-        a = float(input("Enter 1st No: "))
-        b = float(input("Enter 2nd No: "))
-        result = a/b
-    except ValueError:
-        print("Invalid input. Please enter numeric values only.")
-    except ZeroDivisionError:
-        print("Division by zero is not allowed.")
-    else:
-        print(result)
-        break
+# while True:
+#     try:
+#         a = float(input("Enter 1st No: "))
+#         b = float(input("Enter 2nd No: "))
+#         result = a/b
+#     except ValueError:
+#         print("Invalid input. Please enter numeric values only.")
+#     except ZeroDivisionError:
+#         print("Division by zero is not allowed.")
+#     else:
+#         print(result)
+#         break
+
+"""
+🔹 Section C — OOPs (20 Marks)
+"""
+# Q7
+"""
+Q7. Class & Object Basics (5 Marks)
+Create a class Employee with:
+Attributes: name, salary
+Method: display_info()
+Create two objects and display their details."""
+class Employee:
+    def __init__(self, name, salary):
+        self.__name= name
+        self.__slary = salary
+    
+    def display_info(self):
+        print(f"Employee Name: {self.__name}\nEmployee Salary: {self.__slary}")
+
+karan = Employee("Karan", 2500000)
+karan.display_info()
