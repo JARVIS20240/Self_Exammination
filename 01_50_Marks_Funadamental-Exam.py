@@ -82,15 +82,15 @@ Print all results clearly."""
 # seperate_odd_even_num(nums)
 
 # 2nd Way:
-nums = [12, 7, 9, 20, 33, 4, 18]
+# nums = [12, 7, 9, 20, 33, 4, 18]
 
-even_list = [n for n in nums if n%2==0]
-odd_list = [n for n in nums if n%2!=0]
+# even_list = [n for n in nums if n%2==0]
+# odd_list = [n for n in nums if n%2!=0]
 
-print(f"Even No. List:{even_list}")
-print(f"Odd No. List:{odd_list}")
-print(f"Largest Even: {max(even_list)}")
-print(f"Smallest Odd: {min(odd_list)}")
+# print(f"Even No. List:{even_list}")
+# print(f"Odd No. List:{odd_list}")
+# print(f"Largest Even: {max(even_list)}")
+# print(f"Smallest Odd: {min(odd_list)}")
 
 # Q4:
 """Create a dictionary of students:
@@ -107,24 +107,24 @@ Print students scoring above average
 Calculate and print the class average
 Print the topper’s name and marks"""
 
-student = {
-            "Aman": 78,
-            "Riya": 92,
-            "Kunal": 65,
-            "Neha": 88  
-            }
+# student = {
+#             "Aman": 78,
+#             "Riya": 92,
+#             "Kunal": 65,
+#             "Neha": 88  
+#             }
 
-avg = (sum(student.values()) / len(student))
-print(f"Average score: {avg}")
+# avg = (sum(student.values()) / len(student))
+# print(f"Average score: {avg}")
 
-for name,marks in student.items():
-    if marks > avg :
-        print(f"{name} : {marks}")
+# for name,marks in student.items():
+#     if marks > avg :
+#         print(f"{name} : {marks}")
 
-topper_name = max(student, key=student.get)
-topper_marks = student[topper_name]
+# topper_name = max(student, key=student.get)
+# topper_marks = student[topper_name]
 
-print(f"Topper Student= {topper_name} : {topper_marks}")
+# print(f"Topper Student= {topper_name} : {topper_marks}")
 
 """
 🔹 Section B — Functions & Problem Solving (10 Marks)
@@ -145,3 +145,31 @@ Floats: 1
 Booleans: 1
 NoneType: 1
 Use correct type checking."""
+def count_types(data):
+
+    Integers= 0
+    Strings=0
+    Floats=0
+    Booleans= 0
+    NoneType= 0
+    for i in data:
+        if i is None:
+            NoneType+=1
+        elif isinstance(i, bool):
+            Booleans+=1
+        elif isinstance(i, int):
+            Integers+=1
+        elif isinstance(i, str):
+            Strings+=1
+        elif isinstance(i, float):
+            Floats+=1   
+    print("Done")
+    print(f"""
+        Integers: {Integers}
+        Strings: {Strings}
+        Floats: {Floats}
+        Booleans: {Booleans}
+        NoneType: {NoneType}""")
+    print(data)
+data = [10, "hi", 3.5, True, None, "Python"]
+count_types(data)
