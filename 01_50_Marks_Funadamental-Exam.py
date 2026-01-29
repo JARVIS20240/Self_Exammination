@@ -221,11 +221,13 @@ Method: display_info()
 Create two objects and display their details."""
 class Employee:
     def __init__(self, name, salary):
-        self.__name= name
-        self.__slary = salary
+        self.name= name
+        self.slary = salary
     
     def display_info(self):
-        print(f"Employee Name: {self.__name}\nEmployee Salary: {self.__slary}")
+        print(f"Employee Name: {self.name}\nEmployee Salary: {self.slary}")
 
 karan = Employee("Karan", 2500000)
+mann = Employee("Mann", 300000)
 karan.display_info()
+mann.display_info()
