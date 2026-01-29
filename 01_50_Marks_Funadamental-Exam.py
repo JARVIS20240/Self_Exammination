@@ -219,18 +219,18 @@ Create a class Employee with:
 Attributes: name, salary
 Method: display_info()
 Create two objects and display their details."""
-class Employee:
-    def __init__(self, name, salary):
-        self.name= name
-        self.slary = salary
+# class Employee:
+#     def __init__(self, name, salary):
+#         self.name= name
+#         self.slary = salary
     
-    def display_info(self):
-        print(f"Employee Name: {self.name}\nEmployee Salary: {self.slary}")
+#     def display_info(self):
+#         print(f"Employee Name: {self.name}\nEmployee Salary: {self.slary}")
 
-karan = Employee("Karan", 2500000)
-mann = Employee("Mann", 300000)
-karan.display_info()
-mann.display_info()
+# karan = Employee("Karan", 2500000)
+# mann = Employee("Mann", 300000)
+# karan.display_info()
+# mann.display_info()
 
 # Q8 :
 """Constructor & Inheritance (7 Marks)
@@ -241,20 +241,63 @@ Class Employee inheriting Person
 Additional attribute: emp_id
 Method: show_details()
 Demonstrate inheritance properly."""
-class Person:
-    def __init__(self, name, age):
+# class Person:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+
+# class Employee(Person):
+#     def __init__(self, name, age, emp_id):
+#         super().__init__(name, age)
+#         self.emp_id = emp_id
+
+#     def show_details(self):
+#         print(f"Name: {self.name}\nAge: {self.age}\nEmployee ID: {self.emp_id}")
+
+# karan = Person("Karan", 22)
+
+# mann = Employee("Mann", 19, 123456789)
+# mann.show_details()
+
+# Q9:
+"""Encapsulation (4 Marks)
+Create a class BankAccount:
+Private attribute __balance
+
+Methods:
+deposit(amount)
+withdraw(amount)
+get_balance()
+Ensure balance cannot be accessed directly."""
+class BankAccount:
+    def __init__(self, name):
         self.name = name
-        self.age = age
+        self.__balance = 0
+    
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+            print(f"Name:{self.name}\nDeposit Amount:{amount}")
+        else:
+            print("Enter Valid Amount.")
+    
+    def withdraw(self, amount):
+        if amount > 0 :
+            if amount<=self.__balance:
+                self.__balance -= amount
+                print(f"Name:{self.name}\nWithdraw Amount:{amount}")
+            else:
+                print(f"Insufficient balance!\nYour Withroal Amount= {amount}\n\tYour Balance = {self.__balance}")
+        else:
+            print("Withdraw amount must be positive.")
 
-class Employee(Person):
-    def __init__(self, name, age, emp_id):
-        super().__init__(name, age)
-        self.emp_id = emp_id
+    def get_balance(self):
+        print(f"{self.name} Your Balance: {self.__balance}")
 
-    def show_details(self):
-        print(f"Name: {self.name}\nAge: {self.age}\nEmployee ID: {self.emp_id}")
-
-karan = Person("Karan", 22)
-
-mann = Employee("Mann", 19, 123456789)
-mann.show_details()
+karan = BankAccount("Karan")
+mann = BankAccount("Mann")
+karan.deposit(10000)
+karan.withdraw(2000)
+karan.get_balance()
+mann.deposit(500)
+mann.get_balance()
