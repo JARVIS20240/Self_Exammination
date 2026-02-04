@@ -143,10 +143,3 @@ print(stack)
 
 # Q14:
 print(stack.max(axis=0))
-
-
-load_data= np.genfromtxt(
-    "marks.csv",
-    delimiter=",",
-    skip_header=1
-)
