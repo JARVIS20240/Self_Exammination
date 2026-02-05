@@ -88,7 +88,7 @@ While Loops:
 
 # 9. Calculate and print the factorial of a given number.
 # n = 5
-# i = 1
+# i = 1 
 # fact = 1
 # while i<=n:
 #     fact *= i
@@ -105,3 +105,24 @@ While Loops:
 #     n //= 10
 
 # print("Product =", product)
+
+# 11. Count and print the total number of digits in a given number.
+# n =123456
+# count = 0 
+
+# while n > 0:
+#     digit = n % 10
+#     count+=1
+#     n //= 10
+
+# print(f"count = {count}")
+
+# 12. Reverse the given number and print the reversed value.
+# n = 123456
+# rev = 0
+# while n > 0:
+#     digit = n % 10
+#     rev = rev * 10 + digit
+#     n //= 10
+
+# print(f"Reverse Number= {rev}")
