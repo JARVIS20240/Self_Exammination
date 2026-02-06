@@ -24,6 +24,12 @@ While Loops:
 21. Print the square of each number from 1 to n.
 22. Print the cube of each number from 1 to n.
 23. Print all numbers between a and b that are divisible by 7.
+24. Print all factors of the given number.
+25. Find and print the sum of all factors of the given number.
+26. Find the HCF (Highest Common Factor) of two given numbers.
+27. Find the LCM (Least Common Multiple) of two given numbers.
+28. Find the smallest digit in the given number.
+29. Find the largest digit in the given number.
 """
 
 # 1. Print all numbers from 1 to 10 using a loop.
@@ -126,3 +132,50 @@ While Loops:
 #     n //= 10
 
 # print(f"Reverse Number= {rev}")
+
+# 11. Count and print the total number of digits in a given number.
+n =123456
+count = 0 
+
+while n > 0:
+    digit = n % 10
+    count+=1
+    n //= 10
+
+print(f"count = {count}")
+
+# 12. Reverse the given number and print the reversed value.
+n = 123456
+rev = 0
+while n > 0:
+    digit = n % 10
+    rev = rev * 10 + digit
+    n //= 10
+
+print(f"Reverse Number= {rev}")
+
+# 13. Check whether the given number is a palindrome.
+n = 123
+original = n
+rev = 0
+while n > 0:
+    digit = n % 10
+    rev = rev * 10 + digit
+    n //= 10
+
+print(f"Reverse Number= {rev}")
+if original == rev:
+    print(f"{original} is palindrome")
+else:
+    print(f"{original} not palindrome")
+
+# 14. Find and print the sum of digits of the given number.
+n = 1234
+sum = 0
+while n > 0:
+    digit = n % 10
+    sum += digit
+    n//=10
+print(sum)
+
+# 15. Check whether the given number is an Armstrong number.
