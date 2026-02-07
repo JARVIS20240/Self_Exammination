@@ -177,5 +177,3 @@ while n > 0:
     sum += digit
     n//=10
 print(sum)
-
-# 15. Check whether the given number is an Armstrong number.
