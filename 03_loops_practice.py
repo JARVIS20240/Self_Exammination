@@ -134,46 +134,61 @@ While Loops:
 # print(f"Reverse Number= {rev}")
 
 # 11. Count and print the total number of digits in a given number.
-n =123456
-count = 0 
+# n =123456
+# count = 0 
 
-while n > 0:
-    digit = n % 10
-    count+=1
-    n //= 10
+# while n > 0:
+#     digit = n % 10
+#     count+=1
+#     n //= 10
 
-print(f"count = {count}")
+# print(f"count = {count}")
 
 # 12. Reverse the given number and print the reversed value.
-n = 123456
-rev = 0
-while n > 0:
-    digit = n % 10
-    rev = rev * 10 + digit
-    n //= 10
+# n = 123456
+# rev = 0
+# while n > 0:
+#     digit = n % 10
+#     rev = rev * 10 + digit
+#     n //= 10
 
-print(f"Reverse Number= {rev}")
+# print(f"Reverse Number= {rev}")
 
 # 13. Check whether the given number is a palindrome.
-n = 123
-original = n
-rev = 0
-while n > 0:
-    digit = n % 10
-    rev = rev * 10 + digit
-    n //= 10
+# n = 123
+# original = n
+# rev = 0
+# while n > 0:
+#     digit = n % 10
+#     rev = rev * 10 + digit
+#     n //= 10
 
-print(f"Reverse Number= {rev}")
-if original == rev:
-    print(f"{original} is palindrome")
-else:
-    print(f"{original} not palindrome")
+# print(f"Reverse Number= {rev}")
+# if original == rev:
+#     print(f"{original} is palindrome")
+# else:
+#     print(f"{original} not palindrome")
 
 # 14. Find and print the sum of digits of the given number.
-n = 1234
-sum = 0
-while n > 0:
-    digit = n % 10
-    sum += digit
-    n//=10
-print(sum)
+# n = 1234
+# sum = 0
+# while n > 0:
+#     digit = n % 10
+#     sum += digit
+#     n//=10
+# print(sum)
+
+# 15. Check whether the given number is an Armstrong number.
+# [1*3 + 2*3 + 3*3 == 123] Truen or False
+# n = 123
+# temp = n
+# length = len(str(n))
+# sum = 0
+# while n > 0:
+#     digit = n % 10 #get last digit 
+#     sum = sum  + (digit ** length)
+#     n //= 10
+# if temp == sum:
+#     print("Armstrong number")
+# else:
+#     print("Not Armstrong number")
