@@ -192,3 +192,34 @@ While Loops:
 #     print("Armstrong number")
 # else:
 #     print("Not Armstrong number")
+
+# 16. Check whether the given number is a Perfect number.
+# n = 7
+# i=1
+# sum = 0
+# while i<n:
+#     if n%i ==0:
+#         sum+= i
+#     i+=1
+        
+# if sum == n :
+#     print("Prime Number")
+# else:
+#     print("Not Prime Number")
+
+# 17. Print all prime numbers between 1 and 100.
+# n = 1
+# while n<=100:
+#     i = 1
+#     sum = 0
+
+#     while i < n:
+#         if n%i == 0:
+#             sum+=i
+#         i+=1
+
+#     if sum == n and n!=0:
+#         print(n)
+
+#     n+=1
+
