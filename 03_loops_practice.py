@@ -208,18 +208,17 @@ While Loops:
 #     print("Not Prime Number")
 
 # 17. Print all prime numbers between 1 and 100.
-# n = 1
-# while n<=100:
-#     i = 1
-#     sum = 0
+n = 2
+while n<=100:
+    i = 2
+    is_prime = True
 
-#     while i < n:
-#         if n%i == 0:
-#             sum+=i
-#         i+=1
-
-#     if sum == n and n!=0:
-#         print(n)
-
-#     n+=1
-
+    while i <=n // 2:
+        if n%i==0:
+            is_prime = False
+            break
+        i+=1
+    
+    if is_prime:
+        print(n)
+    n+=1
