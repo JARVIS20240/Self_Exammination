@@ -239,4 +239,18 @@ if is_prime and n > 1:
     print("Prime Number")
 else:
     print("Not a Prime Number")
+
+# 19. Print the Fibonacci series up to n terms.
+
+n = 10
+a = 0
+b = 1
+count = 1
+
+while count <= n:
+    print(a)
+    c = a + b
+    a = b
+    b = c
+    count += 1
         
