@@ -222,3 +222,21 @@ while n<=100:
     if is_prime:
         print(n)
     n+=1
+
+# 18. Check whether the given number is a prime number.
+
+n = 7
+i = 2
+is_prime = True
+
+while i < n:
+    if n % i == 0:
+        is_prime = False
+        break
+    i += 1
+
+if is_prime and n > 1:
+    print("Prime Number")
+else:
+    print("Not a Prime Number")
+        
